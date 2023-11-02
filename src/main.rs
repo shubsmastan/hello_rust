@@ -1,8 +1,15 @@
-fn main() {
-    let mut x: i32 = 1;
-    x += 2;
-    let hi = "hi";
+use std::io;
 
-    println!("The value of x is {}.", x);
-    println!("{}, world!", hi);
+fn main() {
+    println!("Guess the number!");
+
+    println!("Please input your guess.");
+
+    let mut guess: String = String::new();
+
+    io::stdin()
+        .read_line(&mut guess)
+        .expect("Failed to read line.");
+
+    println!("Your guess was {guess}.")
 }
